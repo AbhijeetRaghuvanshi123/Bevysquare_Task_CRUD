@@ -11,5 +11,5 @@ export async function addUser(formData: FormData) {
   await userDB.addNewUser({ name, email });
 
   revalidatePath("/users");
-  redirect("users");
+  redirect("/users");
 }
