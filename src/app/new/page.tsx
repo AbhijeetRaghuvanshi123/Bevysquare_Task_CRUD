@@ -1,4 +1,5 @@
 import { addUser } from "@/app/actions/addUser";
+import SubmitButton from "@/components/submitButton";
 
 export default function NewUserPage() {
   return (
@@ -15,12 +16,7 @@ export default function NewUserPage() {
           placeholder="Email"
           className="border border-black/20 px-3 py-2 text-sm outline-none focus:border-black"
         />
-        <button
-          type="submit"
-          className="bg-black text-white text-sm px-4 py-2 hover:bg-black/80 transition-colors w-fit"
-        >
-          Create
-        </button>
+        <SubmitButton text="Create" />
       </form>
     </div>
   );

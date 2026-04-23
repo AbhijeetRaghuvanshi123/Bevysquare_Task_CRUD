@@ -2,6 +2,7 @@
 
 import { updateUser } from "@/app/actions/updateUser";
 import { deleteUser } from "@/app/actions/deleteUser";
+import SubmitButton from "@/components/submitButton";
 
 type User = {
   id: number;
@@ -27,23 +28,13 @@ export default function EditForm({ user }: { user: User }) {
           defaultValue={user.email}
           className="border border-black/20 px-3 py-2 text-sm outline-none focus:border-black"
         />
-        <button
-          type="submit"
-          className="bg-black text-white text-sm px-4 py-2 hover:bg-black/80 transition-colors w-fit"
-        >
-          Update User
-        </button>
+        <SubmitButton text="Update User" />
       </form>
 
       <div className="border-t border-black/10 pt-6">
         <form action={deleteUser}>
           <input type="hidden" name="id" value={user.id} />
-          <button
-            type="submit"
-            className="border border-black/20 text-sm px-4 py-2 text-black/60 hover:border-black hover:text-black transition-colors"
-          >
-            Delete User
-          </button>
+          <SubmitButton text="Delete User" />
         </form>
       </div>
     </div>
