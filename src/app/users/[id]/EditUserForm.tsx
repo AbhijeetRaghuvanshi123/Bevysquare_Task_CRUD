@@ -18,6 +18,7 @@ export default function EditForm({ user }: { user: User }) {
         <input type="hidden" name="id" value={user.id} />
         <input
           name="name"
+          autoFocus
           defaultValue={user.name}
           className="border border-black/20 px-3 py-2 text-sm outline-none focus:border-black"
         />
