@@ -9,12 +9,12 @@ export default function SubmitButton({ text }: { text: string }) {
         <button
             type="submit"
             disabled={pending}
-            className="bg-black text-white text-sm px-4 py-2 hover:bg-black/80 transition-colors w-fit disabled:opacity-50"
+            className="bg-black text-white text-sm h-[38px] w-28 flex-shrink-0 flex items-center justify-center hover:bg-black/80 transition-colors disabled:opacity-50"
         >
             {pending ? (
                 <span className="flex items-center gap-2">
-                    <span className="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full" />
-                    Saving...
+                    <span className="animate-spin h-3.5 w-3.5 border-2 border-white border-t-transparent rounded-full" />
+                    <span>Saving...</span>
                 </span>
             ) : (
                 text
